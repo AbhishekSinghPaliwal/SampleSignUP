@@ -66,7 +66,14 @@ public class Base {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			break;
+		case "firefox":
+			System.setProperty("webdriver.firefox.marionette", "Drivers/geckodriver.exe");
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+			break;
+
 		
+
 		default:
 			driver = null;
 		}
@@ -84,7 +91,7 @@ public class Base {
 
 	public void openUrl() {
 		driver.get(getConfig("url"));
-		
+		// elementActions.waitForPageLoad(driver);
 
 	}
 
