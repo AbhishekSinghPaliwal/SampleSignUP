@@ -1,0 +1,15 @@
+{
+	"browser": "chrome",
+	"url": "https://www.facebook.com/",
+	"firstName":"Abhishek",
+	"surName":"Singh",
+	"userEmail":"abhi.myth21@gmail.com",
+	"userEmailConfirmation":"abhi.myth21@gmail.com",
+	"password":"test12345",
+	"mobileNumber":"8527044878",
+	"birthdayDate":"7",
+	"birthdayMonth":"6",
+	"birthdayYear":"1995"
+	
+	
+}
