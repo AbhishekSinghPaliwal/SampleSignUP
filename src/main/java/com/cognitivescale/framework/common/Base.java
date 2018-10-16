@@ -72,7 +72,6 @@ public class Base {
 			driver.manage().window().maximize();
 			break;
 
-		
 
 		default:
 			driver = null;
