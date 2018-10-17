@@ -1,3 +1,7 @@
+/**
+ * @author Abhishek Singh
+ * 
+ */
 package com.cognitivescale.framework.businessLogic;
 
 import java.io.IOException;
@@ -15,9 +19,7 @@ public class FacebookSignUpPage {
 
 	WebDriver driver;
 
-	// ElementActions elementActions;
 	ElementActions elementActions = new ElementActions();
-	// ElementActions elementActions=new ElementActions();
 
 	@FindBy(xpath = "//input[@name='firstname']")
 	private WebElement firstName;
@@ -43,10 +45,10 @@ public class FacebookSignUpPage {
 	@FindBy(id = "year")
 	private WebElement birthdayYear;
 
-	@FindBy(id = "u_0_a")
+	@FindBy(xpath = "//label[text()='Male']")
 	private WebElement genderRadioButton;
 
-	@FindBy(xpath = "//button[text()='Sign Up']")
+	@FindBy(xpath = "//button[text()='Sign Up' or @id='u_0_11']")
 	private WebElement signUPButton;
 
 	public FacebookSignUpPage() {
@@ -128,20 +130,27 @@ public class FacebookSignUpPage {
 
 	public void setBirthdayYear(String birthdayYear) throws IOException {
 		elementActions.drodownValueSelection(this.birthdayYear, birthdayYear);
-		elementActions.screenshotcaptureAndSave("fileName", driver);
+
 	}
 
 	public WebElement getGenderRadioButton() {
 		return genderRadioButton;
 	}
 
-	public void setGenderRadioButton(String genderRadioButton) {
+	public void setGenderRadioButton() throws IOException {
+		// elementActions.jsExecutorClick(this.genderRadioButton, driver);
+		elementActions.actionClassClick(this.genderRadioButton, driver);
+		elementActions.screenshotcaptureAndSave("SignUpPage", driver);
 
-		// elementActions.inputData(this.genderRadioButton,password);
 	}
 
 	public WebElement getSignUPButton() {
 		return signUPButton;
+	}
+
+	public void setSignUPButton() {
+
+		elementActions.actionClassClick(this.signUPButton, driver);
 	}
 
 }

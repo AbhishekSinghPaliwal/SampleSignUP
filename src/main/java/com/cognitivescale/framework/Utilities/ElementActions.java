@@ -1,3 +1,7 @@
+/**
+ * @author Abhishek Singh
+ * 
+ */
 package com.cognitivescale.framework.Utilities;
 
 import java.io.File;
@@ -12,6 +16,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,9 +26,9 @@ import com.cognitivescale.framework.common.Base;
 public class ElementActions extends Base {
 
 	// public WebDriver driver;
-	public static int count = 1;
+	
 	public WebDriverWait wait;
-	private static final int GLOBAL_WAIT = 90;
+	private static final int GLOBAL_WAIT = 45;
 
 	/*
 	 * public ElementActions(){ driver=getDriver(); }
@@ -51,11 +56,19 @@ public class ElementActions extends Base {
 
 	}
 
-	public void jsExecutor(WebElement element, WebDriver driver) {
+	public void jsExecutorClick(WebElement element, WebDriver driver) {
+		wait = new WebDriverWait(driver, GLOBAL_WAIT);
 		waitForElementClicable(driver, element);
+		System.out.println("waitForElementClicable run");
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click", element);
 
+	}
+	
+	public void actionClassClick(WebElement element, WebDriver driver){
+		waitForElementClicable(driver, element);
+		new Actions(driver).moveToElement(element).doubleClick().perform();
+		
 	}
 
 	public void drodownValueSelection(WebElement element, String value) {
@@ -63,12 +76,11 @@ public class ElementActions extends Base {
 	}
 
 	public void screenshotcaptureAndSave(String filename, WebDriver driver) throws IOException {
-		count = count + 1;
+		
 		Date date = new Date();
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
-		// String
-		// path="D:\\EclipseWorkSpaceNew\\com.cognitivescale.test\\Screenshots\\"+filename+"+date+"+".png";
+		
 		String path = "D:\\EclipseWorkSpaceNew\\com.cognitivescale.test\\Screenshots\\" + filename + ".png";
 		File destinationPath = new File(path);
 		FileUtils.copyFile(sourceFile, destinationPath);

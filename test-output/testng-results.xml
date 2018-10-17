@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5041" started-at="2018-10-16T13:50:26Z" finished-at="2018-10-16T13:50:31Z">
+  <suite name="Suite" duration-ms="5332" started-at="2018-10-17T15:09:21Z" finished-at="2018-10-17T15:09:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5041" started-at="2018-10-16T13:50:26Z" finished-at="2018-10-16T13:50:31Z">
+    <test name="Test" duration-ms="5332" started-at="2018-10-17T15:09:21Z" finished-at="2018-10-17T15:09:27Z">
       <class name="com.cognitivescale.test.FacebookSingnUpTest">
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:com.cognitivescale.test.FacebookSingnUpTest@3246fb96]" name="launchApplication" is-config="true" duration-ms="44" started-at="2018-10-16T19:20:26Z" finished-at="2018-10-16T19:20:26Z">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:com.cognitivescale.test.FacebookSingnUpTest@3246fb96]" name="launchApplication" is-config="true" duration-ms="54" started-at="2018-10-17T20:39:22Z" finished-at="2018-10-17T20:39:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="facebookSignUPForm()[pri:0, instance:com.cognitivescale.test.FacebookSingnUpTest@3246fb96]" name="facebookSignUPForm" duration-ms="4973" started-at="2018-10-16T19:20:26Z" finished-at="2018-10-16T19:20:31Z">
+        <test-method status="PASS" signature="facebookSignUPForm()[pri:0, instance:com.cognitivescale.test.FacebookSingnUpTest@3246fb96]" name="facebookSignUPForm" duration-ms="5253" started-at="2018-10-17T20:39:22Z" finished-at="2018-10-17T20:39:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- facebookSignUPForm -->
       </class> <!-- com.cognitivescale.test.FacebookSingnUpTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

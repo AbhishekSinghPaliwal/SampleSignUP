@@ -1,3 +1,7 @@
+/**
+ * @author Abhishek Singh
+ * 
+ */
 package com.cognitivescale.framework.common;
 
 import java.io.File;
@@ -58,7 +62,7 @@ public class Base {
 	}
 
 	public static void initWebDriver() {
-		
+
 		String browser = getConfig("browser");
 		switch (browser) {
 		case "chrome":
@@ -71,7 +75,6 @@ public class Base {
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			break;
-
 
 		default:
 			driver = null;

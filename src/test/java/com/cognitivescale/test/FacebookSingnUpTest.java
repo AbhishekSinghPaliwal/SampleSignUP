@@ -1,3 +1,7 @@
+/**
+ * @author Abhishek Singh
+ * 
+ */
 package com.cognitivescale.test;
 
 import java.io.IOException;
@@ -37,6 +41,7 @@ public class FacebookSingnUpTest extends Base {
 			facebookSignUpPage.setBirthdayMonth(getConfig("birthdayMonth"));
 			facebookSignUpPage.setBirthdayYear(getConfig("birthdayYear"));
 			facebookSignUpPage.setGenderRadioButton();
+			facebookSignUpPage.setSignUPButton();
 
 		} catch (Exception exe) {
 			System.out.println("Execption details are  " + exe);
