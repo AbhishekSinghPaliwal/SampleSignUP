@@ -6,4 +6,6 @@
 =>For all the repetitive action which is used multipe times I have created a common method, and calling whereever required instead of writing new method again and again.
 =>Runner file is "testng.xml"
 =>This project can be downloaded and can run directly through testng.xml, it will call the java test file, and other file will be called accordingly.
+=>After run we can see all the screen data details thorugh screenshot("SignUpPage.png")which I took after enetring data in everyfield.
+=>Testng report "emailable-report.html"  and "index.html" can be seen inside test-output folder. 
 
