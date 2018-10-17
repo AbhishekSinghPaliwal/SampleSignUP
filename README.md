@@ -1,4 +1,5 @@
 # SampleSignUP
+=>I have used Facebook signup page which is available on facebook site i.e "https://www.facebook.com/" to automate our SignUp test cases.
 =>I have used POM(Page Object Model) along woith pagefactory approach.
 =>I have made a maven project.
 =>I have not hard coded any data inside java program, I have used separate JSON file for data.
